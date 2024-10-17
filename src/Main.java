@@ -22,7 +22,7 @@ class Block {
     }
 
     public void mineBlock(int difficulty) {
-        String target = new String(new char[difficulty]).replace('\0', '0'); // создаем целевую строку, например, "0000"
+        String target = new String(new char[difficulty]).replace('\0', '0'); 
         while (!hash.substring(0, difficulty).equals(target)) {
             nonce++;
             hash = calculateHash();
